@@ -1,0 +1,68 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row mt-4">
+
+    <div class="col-lg-8 offset-lg-2">
+
+        <h3 class="mb-4">Listing Details</h3>
+
+        <div class="card show-card">
+
+            <img
+                src="<%= listing.image.url %>"
+                class="card-img-top show-image"
+                alt="<%= listing.title %>"
+            >
+
+            <div class="card-body">
+
+                <h3 class="card-title">
+                    <%= listing.title %>
+                </h3>
+
+                <p class="card-text">
+                    <%= listing.description %>
+                </p>
+
+                <p class="card-text">
+                    <strong>
+                        &#8377; <%= listing.price.toLocaleString("en-IN") %>
+                    </strong>
+                    / night
+                </p>
+
+                <p class="card-text">
+                    📍 <%= listing.location %>, <%= listing.country %>
+                </p>
+
+                <div class="show-actions">
+
+                    <a
+                        href="/listings/<%= listing._id %>/edit"
+                        class="btn btn-dark"
+                    >
+                        Edit Listing
+                    </a>
+
+                    <form
+                        method="POST"
+                        action="/listings/<%= listing._id %>?_method=DELETE"
+                    >
+                        <button type="submit" class="btn btn-outline-danger">
+                            Delete Listing
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <a href="/listings" class="back-link">
+            ← Back to all listings
+        </a>
+
+    </div>
+
+</div>
