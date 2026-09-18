@@ -6,7 +6,7 @@
 
         <h3 class="mb-4">Listing Details</h3>
 
-        <div class="card show-card">
+        <div class="card show-card listing-card">
 
             <img
                 src="<%= listing.image.url %>"
@@ -51,11 +51,49 @@
                         <button type="submit" class="btn btn-outline-danger">
                             Delete Listing
                         </button>
+
                     </form>
 
                 </div>
 
             </div>
+
+        </div>
+
+        <div class="col-12 offset-0 mb-3">
+            <hr>
+            <h4>Leave a Review</h4>
+            <form action="/listings/<%= listing.id %>/reviews" method="POST" novalidate class="needs-validation">
+                <div class="mb-3 mt-3">
+                    <label for="rating">Rating</label>
+                    <input type="range" min="1" max="5" id="rating" name="review[rating]" class="form-range" step="1">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="comment">Comments</label>
+                    <textarea id="comment" name="review[comment]" cols="30" rows="5" class="form-control" required></textarea>
+                    <div class="invalid-feedback">
+                        Please add your comments.
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-outline-dark">Submit Review</button>
+            </form>
+
+            <hr/>
+            <p><b>All Reviews</b></p>
+            <div class="row">
+
+            <% for(review of listing.reviews){%>
+                <div class="card col-5 ms-3 mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Steve Rogers</h5>
+                        <p class="card-text"><%= review.comment %></p>
+                        <p class="card-text"><%= review.rating %> star rating </p>
+                    </div>
+
+                </div>
+            <% } %>
+            </div>
+
 
         </div>
 

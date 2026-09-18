@@ -108,7 +108,7 @@ body {
    CARD
 ========================================= */
 
-.card {
+.listing-card {
     border: none !important;
     background: transparent;
     overflow: hidden;
