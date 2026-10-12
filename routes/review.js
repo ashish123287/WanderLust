@@ -29,7 +29,7 @@ router.post("/:id/reviews", wrapAsync(async (req, res) => {
 
     await newReview.save();
     await listing.save();
-
+    req.flash("success", "Review Added Successfully!");
     res.redirect(`/listings/${id}`);
 }));
 

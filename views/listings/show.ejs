@@ -21,6 +21,8 @@
                 </h3>
 
                 <p class="card-text">
+                    <i><%= listing.owner ? listing.owner.username : "Owner not assigned" %></i>
+                    <br>
                     <%= listing.description %>
                 </p>
 
@@ -35,6 +37,7 @@
                     📍 <%= listing.location %>, <%= listing.country %>
                 </p>
 
+               
                 <div class="show-actions">
 
                     <a
@@ -55,6 +58,7 @@
                     </form>
 
                 </div>
+            
 
             </div>
 

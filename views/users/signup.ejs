@@ -1,0 +1,100 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="signup-page">
+    <div class="signup-card card shadow-sm">
+
+        <div class="card-body">
+
+            <h2 class="signup-title">Create Your Account</h2>
+
+            <p class="signup-subtitle">
+                Join WanderLust and start exploring.
+            </p>
+
+            <form method="POST" action="/users/signup"
+                  novalidate
+                  class="needs-validation">
+
+                <div class="mb-3">
+                    <label for="username" class="form-label">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        required
+                        minlength="3"
+                        autocomplete="username"
+                    >
+
+                    <div class="invalid-feedback">
+                        Please enter a username with at least 3 characters.
+                    </div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                        autocomplete="email"
+                    >
+
+                    <div class="invalid-feedback">
+                        Please enter a valid email address.
+                    </div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        required
+                        minlength="6"
+                        autocomplete="new-password"
+                    >
+
+                    <div class="invalid-feedback">
+                        Password must contain at least 6 characters.
+                    </div>
+                </div>
+
+
+                <button type="submit"
+                        class="btn btn-dark w-100 signup-btn">
+                    Create Account
+                </button>
+
+            </form>
+
+            <hr class="my-4">
+
+            <div class="signup-login">
+                Already have an account?
+                <a href="/users/login">Log in</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>

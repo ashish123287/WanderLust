@@ -367,3 +367,174 @@ body {
 .back-link:hover {
     color: #ff385c;
 }
+
+/* Sign Up */
+/* Signup Page */
+
+.signup-page {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-card {
+    width: 100%;
+    max-width: 480px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.signup-card .card-body {
+    padding: 2.5rem;
+}
+
+.signup-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.signup-subtitle {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+/* Labels */
+
+.signup-card .form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Inputs */
+
+.signup-card .form-control {
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.signup-card .form-control:focus {
+    border-color: #212529;
+    box-shadow: 0 0 0 3px rgba(33, 37, 41, 0.1);
+}
+
+/* Signup button */
+
+.signup-btn {
+    height: 48px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.signup-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Login link */
+
+.signup-login {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.signup-login a {
+    color: #212529;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.signup-login a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+    .signup-card .card-body {
+        padding: 1.5rem;
+    }
+
+    .signup-title {
+        font-size: 1.6rem;
+    }
+}
+
+/* Login Page */
+
+.login-page {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 480px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.login-card .card-body {
+    padding: 2.5rem;
+}
+
+.login-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+.login-card .form-label {
+    font-weight: 500;
+}
+
+.login-card .form-control {
+    height: 48px;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.login-card .form-control:focus {
+    border-color: #212529;
+    box-shadow: 0 0 0 3px rgba(33, 37, 41, 0.1);
+}
+
+.login-btn {
+    height: 48px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.login-signup {
+    text-align: center;
+    color: #6c757d;
+}
+
+.login-signup a {
+    color: #212529;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.login-signup a:hover {
+    text-decoration: underline;
+}
